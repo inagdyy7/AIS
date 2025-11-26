@@ -1,0 +1,176 @@
+:root {
+  --primary: #000;
+  --secondary: #fbfbfb;
+  --card-radius: 14px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;         /* More space between fields */
+  width: 100%;
+  padding: 0 1px;              /* Slight horizontal padding for neatness */
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 8px;          /* Enough space under label */
+  margin-left: 2px;            /* A little left indent */
+  text-align: left;
+  font-size: 1.07em;           /* Slightly larger for clarity */
+  letter-spacing: 0.04em;
+}
+
+.form-group input {
+  padding: 10px 9px 9px 10px; /* Good top/right/bottom/left padding */
+  border: none;
+  border-bottom: 2px solid #bbb;
+  border-radius: 9px 9px 0 0;
+  font-size: 1em;
+  background: #fff;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-bottom: 4px;          /* Slight space below each input field */
+}
+
+
+body {
+  margin: 0;
+  background: linear-gradient(140deg, #fbfbfb 75%, #f6f6fa 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 24px;
+}
+
+/* Card style for About and Login */
+.card {
+  background: #fff;
+  border-radius: var(--card-radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+  padding: 40px 30px;
+  max-width: 540px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* About Us card section styles */
+.about-card h1 {
+  margin-top: 0;
+  font-size: 2em;
+  color: var(--primary);
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  width: 100%;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  border-radius: 18px;
+  max-width: 180px;
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 6px 32px rgba(40,40,50,0.09);
+}
+
+.about-text {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-text p {
+  font-size: 1.1em;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.btn-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.btn {
+  font-size: 1em;
+  padding: 10px 30px;
+  border-radius: 7px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+  cursor: pointer;
+}
+
+.primary {
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+.primary:hover {
+  background: #333;
+}
+
+.secondary {
+  background: var(--secondary);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.secondary:hover {
+  background: #eee;
+}
+
+.back-link {
+  margin-top: 16px;
+  color: #0077b5;
+  text-decoration: none;
+  font-size: .98em;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .card {
+    max-width: 95vw;
+    padding: 20px 8px;
+  }
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .about-image img {
+    max-width: 120px;
+    height: 120px;
+  }
+}

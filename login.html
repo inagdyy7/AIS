@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="c.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card login-card">
+      <h1>Log In</h1>
+      <form id="loginForm" autocomplete="off">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        <div class="btn-row">
+          <button type="submit" class="btn primary">Log In</button>
+          <button type="button" class="btn secondary" id="loginSignUpBtn">Sign Up</button>
+        </div>
+      </form>
+      <a href="about.html" class="back-link">← Back to About</a>
+    </div>
+  </div>
+  <script>
+    // Login Form JS: validation & feedback
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      if (!email || !password) {
+        alert('Please fill in both email and password.');
+      } else if (!validateEmail(email)) {
+        alert('Please enter a valid email address.');
+      } else {
+        alert('Logged in successfully!');
+      }
+    });
+
+    function validateEmail(email) {
+      // Simple email validator
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // Sign Up button JS for Login page
+    document.getElementById('loginSignUpBtn').addEventListener('click', function() {
+      alert('Sign Up feature coming soon!');
+    });
+  </script>
+</body>
+</html>
